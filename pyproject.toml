@@ -5,9 +5,14 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "google-genai>=1.59.0",
     "ipykernel>=7.1.0",
+    "litellm>=1.81.1",
     "matplotlib>=3.10.8",
     "numpy>=2.4.1",
+    "openai>=2.15.0",
+    "pydantic>=2.12.5",
+    "typing>=3.10.0.0",
 ]
 
 [dependency-groups]
