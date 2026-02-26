@@ -117,7 +117,6 @@ def snowball_tokenize(text: str) -> list[str]:
     stemmer = _get_stemmer()
     return [stemmer.stemWord(token) for token in tokens]
 
-
 # ============================================================
 # BM25 SEARCH
 # ============================================================
@@ -153,7 +152,6 @@ def build_index(docs: list[str], tokenizer=None) -> tuple[dict, list[int]]:
             index[term][doc_id] = count
 
     return index, doc_lengths
-
 
 def score_bm25(
     query: str,
