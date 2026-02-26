@@ -1,1 +1,6 @@
 .env
+temp/checkpoint_*.npy
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
