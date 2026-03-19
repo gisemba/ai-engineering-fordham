@@ -1,0 +1,4 @@
+$779bb652-d2ff-4591-adca-bc8cc2f71606²”!
+image_hash ÿÿÿÿÿÿÿÿÿ*string8!filename ÿÿÿÿÿÿÿÿÿ*string8breed ÿÿÿÿÿÿÿÿÿ*string8style ÿÿÿÿÿÿÿÿÿ*string8 setting ÿÿÿÿÿÿÿÿÿ*string8!activity ÿÿÿÿÿÿÿÿÿ*string8has_text ÿÿÿÿÿÿÿÿÿ*bool8$description ÿÿÿÿÿÿÿÿÿ*string84vector ÿÿÿÿÿÿÿÿÿ*fixed_size_list:float:38408"!
+lance.auto_cleanup.interval20"'
+lance.auto_cleanup.older_than14days

@@ -533,3 +533,45 @@ def normalize_scores(scores: np.ndarray) -> np.ndarray:
     if max_score - min_score == 0:
         return np.zeros_like(scores)
     return (scores - min_score) / (max_score - min_score)
+
+# ============================================================
+# METRICS FOR STRING-BASED RETRIEVAL (MRR, Recall)
+# ============================================================
+
+
+def calculate_mrr(predictions: list[str], gt: list[str]) -> float:
+    """
+    Calculate Mean Reciprocal Rank.
+
+    For each ground truth label, find its position in the predictions list.
+    Return the maximum reciprocal rank across all ground truth labels.
+
+    Args:
+        predictions: Ranked list of predicted labels (strings)
+        gt: List of ground truth labels (strings)
+
+    Returns:
+        MRR score (0 to 1)
+    """
+    mrr = 0.0
+    for label in gt:
+        if label in predictions:
+            mrr = max(mrr, 1 / (predictions.index(label) + 1))
+    return mrr
+
+
+def get_recall(predictions: list[str], gt: list[str]) -> float:
+    """
+    Calculate recall over string lists.
+
+    Args:
+        predictions: List of predicted labels (strings)
+        gt: List of ground truth labels (strings)
+
+    Returns:
+        Recall score (0 to 1)
+    """
+    if len(gt) == 0:
+        return 0.0
+    return len([label for label in gt if label in predictions]) / len(gt)
+    
